@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Calculadora JS</title>
+    <meta name="description" content="Calculadora feita a partir de JavaScript, HTML5 e CSS3">
+    <meta name="keywords" content="Calculadora JavaScript">
+    <link rel="stylesheet" href="css/estilo.css">
+    <script type="text/javascript" src="js/script.js"></script>
+  </head>
+  <body>
+    <main>
+      <h1>Calculadora</h1>
+      <form method="get" name="calc">
+        <table>
+          <tr>
+            <td>
+              <input type="text" name="tela" id="tela" disabled>
+            </td>
+          </tr>
+          <tr class="botao">
+            <td>
+              <input type="button" name="sete" value=" 7 " onClick="calc.tela.value += '7'">
+              <input type="button" name="oito" value=" 8 " onClick="calc.tela.value += '8'">
+              <input type="button" name="nove" value=" 9 " onClick="calc.tela.value += '9'">
+              <input type="button" name="div" value=" / " onClick="calc.tela.value += '/'">
+            </td>
+          </tr>
+
+          <tr class="botao">
+            <td>
+              <input type="button" name="quatro" value=" 4 " onClick="calc.tela.value += '4'">
+              <input type="button" name="cinco" value=" 5 " onClick="calc.tela.value += '5'">
+              <input type="button" name="seis" value=" 6 " onClick="calc.tela.value += '6'">
+              <input type="button" name="mult" value=" * " onClick="calc.tela.value += '*'">
+            </td>
+          </tr>
+
+          <tr class="botao">
+            <td>
+              <input type="button" name="um" value=" 1 " onClick="calc.tela.value += '1'">
+              <input type="button" name="dois" value=" 2 " onClick="calc.tela.value += '2'">
+              <input type="button" name="tres" value=" 3 " onClick="calc.tela.value += '3'">
+              <input type="button" name="menos" value=" - " onClick="calc.tela.value += '-'">
+            </td>
+          </tr>
+
+          <tr class="botao">
+            <td>
+              <input type="button" name="ponto" value=" . " onClick="calc.tela.value += '.'">
+              <input type="button" name="zero" value=" 0 " onClick="calc.tela.value += '0'">
+              <input type="button" name="igual" value=" = " onClick="calc.tela.value = eval(calc.tela.value)">
+              <input type="button" name="mais" value=" + " onClick="document.getElementById('tela').value += '+'">
+            </td>
+          </tr>
+
+          <tr class="botao">
+            <td>
+              <input type="button" name="limpa" value=" C " style="width:76px"
+              onClick="calc.tela.value = ''">
+              <input type="button" name="apagaum" value=" &larr; " onClick="apagarUm()">
+              <input type="button" name="raiz" value=" &radic; " onClick="extrairRaiz()">
+
+            </td>
+          </tr>
+        </table>
+      </form>
+    </main>
+  </body>
+</html>
